@@ -103,3 +103,11 @@ function animate()
 }
 
 animate()
+
+canvas.addEventListener("touchmove", function(event)
+{
+    mouse.x = event.touches[0].clientX
+    mouse.y = event.touches[0].clientY
+    for(let i =0; i<3; i++)
+        particle_array.push(new Particle());
+})
